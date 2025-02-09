@@ -24,5 +24,8 @@ class FirstActivityFragment : Fragment() {
         binding.buttonToSecondActivity.setOnClickListener {
             findNavController().navigate(R.id.action_firstActivityFragment_to_secondActivityFragment)
         }
+        binding.button123.setOnClickListener {
+            findNavController().navigate(R.id.action_firstActivityFragment_to_secondActivityFragment)
+        }
     }
 }
