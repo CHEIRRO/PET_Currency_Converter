@@ -10,8 +10,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
-        android:layout_width="398dp"
-        android:layout_height="272dp"
+        android:layout_width="388dp"
+        android:layout_height="292dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -21,8 +21,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="272dp"
-            android:orientation="vertical">
+            android:layout_height="293dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
 
             <LinearLayout
@@ -30,9 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical"
-                android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:paddingRight="10dp"
                 android:paddingBottom="10dp">
 
 
@@ -41,10 +41,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_border"
-                    android:backgroundTint="#615B5B"
                     android:gravity="center"
                     android:shadowRadius="25"
                     android:text="КОНВЕРТЕР ВАЛЮТ"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -86,7 +86,8 @@
                         android:textColor="@color/black"
                         android:textSize="10sp"
                         app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24"
-                        app:drawableRightCompat="@drawable/baseline_arrow_drop_down_24">
+                        app:drawableRightCompat="@drawable/baseline_arrow_drop_down_24"
+                        tools:ignore="SmallSp">
 
                     </TextView>
 
@@ -100,13 +101,48 @@
                         android:textColor="@color/black"
                         android:textSize="10sp"
                         app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24"
-                        app:drawableRightCompat="@drawable/baseline_arrow_drop_down_24">
+                        app:drawableRightCompat="@drawable/baseline_arrow_drop_down_24"
+                        tools:ignore="SmallSp">
 
                     </TextView>
-
                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                tools:ignore="UselessLeaf">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Курс конвертации:"
+                    android:paddingLeft="5dp"/>
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D98C4C33"
+                android:text="Конвертировать" />
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/result_textview_background"
+                android:gravity="left"
+                android:text="Результат: 0.00"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
